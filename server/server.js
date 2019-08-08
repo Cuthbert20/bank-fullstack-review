@@ -1,3 +1,5 @@
+//use node to build an express server
+
 const express = require('express')
 const app = express()
 require('dotenv').config()
@@ -19,6 +21,7 @@ app.use(session({
 }))
 
 app.post('/auth/register', authCtrl.register)
+app.delete('/auth/logout', authCtrl.logout)
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
