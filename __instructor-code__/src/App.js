@@ -1,21 +1,15 @@
-import React from 'react';
-import './App.css';
-import Dashboard from './components/Dashboard/Dashboard'
-import Landing from './components/Landing/Landing'
+import React from 'react'
+import './App.css'
 import Nav from './components/Nav/Nav'
-import Transaction from './components/Transaction/Transaction'
-import Transfer from './components/Transfer/Transfer'
+import routes from './routes'
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
-      <Dashboard/>
-      <Landing/>
-      <Transaction/>
-      <Transfer/>
+      <Nav />
+      {routes}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
